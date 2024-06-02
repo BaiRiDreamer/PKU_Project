@@ -39,6 +39,7 @@ def verify_faces():
 
     if img1_path and img2_path:
         try:
+            # __import__('ipdb').set_trace()
             result = DeepFace.verify(img1_path, img2_path, distance_metric=metric)
             print(colorama.Fore.GREEN + "验证结果: " + colorama.Style.RESET_ALL)
             utils.display_face_recognition_result(result, img1_path, img2_path)
@@ -97,6 +98,23 @@ def real_time_face_recognition():
 
 
 if __name__ == '__main__':
+    """ 
+    Test process:
+    using ./dataset as database, and ./testset for testing.
+    1. verify_faces:    
+        - using ./testset/img34.jpg and ./testset/img37.jpg. They are all Leonardo DiCaprio.
+        - using ./testset/img33.jpg and ./testset/img34.jpg. They are not the same person.
+    2. find_face_in_db:
+         - using ./testset/img37.jpg and dataset.
+    3. analyze_face:
+        - using ./testset/img34.jpg.
+        - Leonardo DiCaprio was born in 1974, and find image in https://www.esquire.com/uk/latest-news/a27251247/leonardo-dicaprio-could-play-a-con-man-in-guillermo-del-toros-nightmare-alley , in 2019
+        - 2019 - 1974 = 45, close to 38
+        - Leonardo DiCaprio has Italian and German ancestry (from https://en.wikipedia.org/wiki/Leonardo_DiCaprio, "Early life and acting background" Part), so he is white
+        - Neutral and Man is obvious
+    4. real_time_face_recognition:
+        - you shuold build up your own image database with your own image
+    """
     # 这里使用命令行来实现整体功能，不要使用easygui的GUI
     print(
         colorama.Fore.GREEN + "-----------------------------------------------------------------------------\n" + colorama.Style.RESET_ALL)
@@ -105,8 +123,9 @@ if __name__ == '__main__':
     print("1. 面部验证功能")
     print("2. 在数据库中查找面部")
     print("3. 面部属性分析功能")
-    print("4. 退出系统")
-    print("5. 帮助菜单")
+    print("4. 实时面部识别功能")
+    print("5. 退出系统")
+    print("6. 帮助菜单")
     print()
 
     while True:
@@ -118,15 +137,19 @@ if __name__ == '__main__':
         elif choice == "3":
             analyze_face()
         elif choice == "4":
+            real_time_face_recognition()
+        elif choice == "5":
             print(colorama.Fore.RED + "感谢使用，再见！" + colorama.Style.RESET_ALL)
             break
-        elif choice == "5":
+        elif choice == "6":
             print(colorama.Fore.BLUE + "使用教程:\n" + colorama.Style.RESET_ALL)
             print("1. 面部验证功能")
             print("2. 在数据库中查找面部")
             print("3. 面部属性分析功能")
-            print("4. 退出系统")
-            print("5. 帮助菜单")
+            print("4. 实时面部识别功能")
+            print("5. 退出系统")
+            print("6. 帮助菜单")
         else:
             print("无效的选择，请重新选择, 输入5查看帮助菜单")
             continue
+
