@@ -5,6 +5,7 @@ import utils
 import colorama
 import logging
 import os
+from llm import *
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 logging.getLogger('tensorflow').setLevel(logging.ERROR)
@@ -114,6 +115,7 @@ if __name__ == '__main__':
         - Neutral and Man is obvious
     4. real_time_face_recognition:
         - you shuold build up your own image database with your own image
+    5. llm -> go to llm.ipynb
     """
     # 这里使用命令行来实现整体功能，不要使用easygui的GUI
     print(
@@ -124,8 +126,9 @@ if __name__ == '__main__':
     print("2. 在数据库中查找面部")
     print("3. 面部属性分析功能")
     print("4. 实时面部识别功能")
-    print("5. 退出系统")
-    print("6. 帮助菜单")
+    print("5. 通过大语言模型查找数据库的人脸")
+    print("6. 退出系统")
+    print("7. 帮助菜单")
     print()
 
     while True:
@@ -139,17 +142,29 @@ if __name__ == '__main__':
         elif choice == "4":
             real_time_face_recognition()
         elif choice == "5":
+            db_path = easygui.diropenbox(msg="选择数据库文件夹", title="选择文件夹")
+            if not os.path.isdir(db_path) or not any([filename.endswith(('.png','.jpg','.jpeg')) for filename in os.listdir(db_path)]):
+                print(colorama.Fore.RED + "请选择正确的文件夹" + colorama.Style.RESET_ALL)
+                continue
+            description = input("请输入关于人脸的描述: ")
+            # __import__('ipdb').set_trace()
+            analysis_results = load_analysis_results(db_path)
+            res = match_images_with_description(analysis_results,description)
+            display_images(db_path,res)
+            
+        elif choice == "6":
             print(colorama.Fore.RED + "感谢使用，再见！" + colorama.Style.RESET_ALL)
             break
-        elif choice == "6":
+        elif choice == "7":
             print(colorama.Fore.BLUE + "使用教程:\n" + colorama.Style.RESET_ALL)
             print("1. 面部验证功能")
             print("2. 在数据库中查找面部")
             print("3. 面部属性分析功能")
             print("4. 实时面部识别功能")
-            print("5. 退出系统")
-            print("6. 帮助菜单")
+            print("5. 通过大语言模型查找数据库的人脸")
+            print("6. 退出系统")
+            print("7. 帮助菜单")
         else:
-            print("无效的选择，请重新选择, 输入5查看帮助菜单")
+            print("无效的选择，请重新选择, 输入7查看帮助菜单")
             continue
 
