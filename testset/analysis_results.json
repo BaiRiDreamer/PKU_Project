@@ -1,0 +1,216 @@
+{
+    "img37.jpg": [
+        {
+            "age": 28,
+            "region": {
+                "x": 545,
+                "y": 77,
+                "w": 219,
+                "h": 219,
+                "left_eye": [
+                    691,
+                    164
+                ],
+                "right_eye": [
+                    609,
+                    169
+                ]
+            },
+            "face_confidence": 0.9,
+            "gender": {
+                "Woman": 0.0016427102309535258,
+                "Man": 99.9983549118042
+            },
+            "dominant_gender": "Man",
+            "race": {
+                "asian": 0.7497330196201801,
+                "indian": 1.1945600621402264,
+                "black": 0.2991046058014035,
+                "white": 22.9934960603714,
+                "middle eastern": 4.5967161655426025,
+                "latino hispanic": 70.16639113426208
+            },
+            "dominant_race": "latino hispanic",
+            "emotion": {
+                "angry": 2.2205064073204994,
+                "disgust": 0.013538618804886937,
+                "fear": 0.02986319304909557,
+                "happy": 0.0057177334383595735,
+                "sad": 3.6621451377868652,
+                "surprise": 0.057468144223093987,
+                "neutral": 94.01075839996338
+            },
+            "dominant_emotion": "neutral"
+        }
+    ],
+    "img36.jpg": [
+        {
+            "age": 32,
+            "region": {
+                "x": 628,
+                "y": 226,
+                "w": 330,
+                "h": 330,
+                "left_eye": [
+                    846,
+                    362
+                ],
+                "right_eye": [
+                    739,
+                    366
+                ]
+            },
+            "face_confidence": 0.92,
+            "gender": {
+                "Woman": 0.012147874076617882,
+                "Man": 99.98785257339478
+            },
+            "dominant_gender": "Man",
+            "race": {
+                "asian": 6.140834465622902,
+                "indian": 4.898788779973984,
+                "black": 1.9471868872642517,
+                "white": 19.857047498226166,
+                "middle eastern": 9.005407243967056,
+                "latino hispanic": 58.15073251724243
+            },
+            "dominant_race": "latino hispanic",
+            "emotion": {
+                "angry": 0.5762550514191389,
+                "disgust": 0.06638192571699619,
+                "fear": 0.05705102230422199,
+                "happy": 0.01316943671554327,
+                "sad": 0.9214652702212334,
+                "surprise": 0.0013034024050284643,
+                "neutral": 98.36437106132507
+            },
+            "dominant_emotion": "neutral"
+        }
+    ],
+    "img33.jpg": [
+        {
+            "age": 24,
+            "region": {
+                "x": 512,
+                "y": 415,
+                "w": 973,
+                "h": 973,
+                "left_eye": [
+                    1147,
+                    805
+                ],
+                "right_eye": [
+                    818,
+                    802
+                ]
+            },
+            "face_confidence": 0.88,
+            "gender": {
+                "Woman": 3.922520477317448e-05,
+                "Man": 99.99996423721313
+            },
+            "dominant_gender": "Man",
+            "race": {
+                "asian": 2.423064494363726,
+                "indian": 1.7878383129431827,
+                "black": 0.4662933669187585,
+                "white": 51.99580168774108,
+                "middle eastern": 14.328427394815995,
+                "latino hispanic": 28.998571157625776
+            },
+            "dominant_race": "white",
+            "emotion": {
+                "angry": 0.4709974677710216,
+                "disgust": 3.67336655228408e-08,
+                "fear": 0.05840284050235692,
+                "happy": 1.2829218824459245,
+                "sad": 0.07593775387854897,
+                "surprise": 0.06195199463044075,
+                "neutral": 98.04978955088792
+            },
+            "dominant_emotion": "neutral"
+        }
+    ],
+    "img35.jpg": [
+        {
+            "age": 25,
+            "region": {
+                "x": 216,
+                "y": 160,
+                "w": 410,
+                "h": 410,
+                "left_eye": null,
+                "right_eye": null
+            },
+            "face_confidence": 0.87,
+            "gender": {
+                "Woman": 1.4800285441651795e-05,
+                "Man": 99.99998807907104
+            },
+            "dominant_gender": "Man",
+            "race": {
+                "asian": 0.22215271761433586,
+                "indian": 0.3945041217359377,
+                "black": 0.05965860101222104,
+                "white": 66.60811106014914,
+                "middle eastern": 11.174167613635516,
+                "latino hispanic": 21.54140451797274
+            },
+            "dominant_race": "white",
+            "emotion": {
+                "angry": 4.042504596263444,
+                "disgust": 0.0008370220301504339,
+                "fear": 0.048972145313599426,
+                "happy": 0.14092723980484842,
+                "sad": 1.3338868369988701,
+                "surprise": 0.05723982808492053,
+                "neutral": 94.37563385818207
+            },
+            "dominant_emotion": "neutral"
+        }
+    ],
+    "img34.jpg": [
+        {
+            "age": 38,
+            "region": {
+                "x": 659,
+                "y": 113,
+                "w": 464,
+                "h": 464,
+                "left_eye": [
+                    939,
+                    296
+                ],
+                "right_eye": [
+                    797,
+                    302
+                ]
+            },
+            "face_confidence": 0.92,
+            "gender": {
+                "Woman": 2.874974143196596e-05,
+                "Man": 99.99997615814209
+            },
+            "dominant_gender": "Man",
+            "race": {
+                "asian": 0.009009458534921806,
+                "indian": 0.04706404891405416,
+                "black": 0.003427018919695707,
+                "white": 83.349790173794,
+                "middle eastern": 7.405630361362652,
+                "latino hispanic": 9.18507466494147
+            },
+            "dominant_race": "white",
+            "emotion": {
+                "angry": 0.15774557832628489,
+                "disgust": 1.2774538760140786e-06,
+                "fear": 0.006929221126483753,
+                "happy": 0.0030689348932355642,
+                "sad": 0.2636327873915434,
+                "surprise": 9.149284778686706e-05,
+                "neutral": 99.5685338973999
+            },
+            "dominant_emotion": "neutral"
+        }
+    ]
+}
