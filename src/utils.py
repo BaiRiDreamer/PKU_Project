@@ -104,52 +104,6 @@ def display_find_in_db_result(df_list, img_path, db_path):
                 plt.show()
 
 
-# results (List[Dict[str, Any]]): A list of dictionaries, where each dictionary represents
-# the analysis results for a detected face. Each dictionary in the list contains the
-# following keys:
-#
-# - 'region' (dict): Represents the rectangular region of the detected face in the image.
-# - 'x': x-coordinate of the top-left corner of the face.
-# - 'y': y-coordinate of the top-left corner of the face.
-# - 'w': Width of the detected face region.
-# - 'h': Height of the detected face region.
-#
-# - 'age' (float): Estimated age of the detected face.
-#
-# - 'face_confidence' (float): Confidence score for the detected face.
-# Indicates the reliability of the face detection.
-#
-# - 'dominant_gender' (str): The dominant gender in the detected face.
-# Either "Man" or "Woman".
-#
-# - 'gender' (dict): Confidence scores for each gender category.
-# - 'Man': Confidence score for the male gender.
-# - 'Woman': Confidence score for the female gender.
-#
-# - 'dominant_emotion' (str): The dominant emotion in the detected face.
-# Possible values include "sad," "angry," "surprise," "fear," "happy,"
-# "disgust," and "neutral"
-#
-# - 'emotion' (dict): Confidence scores for each emotion category.
-# - 'sad': Confidence score for sadness.
-#     - 'angry': Confidence score for anger.
-#     - 'surprise': Confidence score for surprise.
-#     - 'fear': Confidence score for fear.
-#     - 'happy': Confidence score for happiness.
-#     - 'disgust': Confidence score for disgust.
-#     - 'neutral': Confidence score for neutrality.
-#
-# - 'dominant_race' (str): The dominant race in the detected face.
-# Possible values include "indian," "asian," "latino hispanic,"
-# "black," "middle eastern," and "white."
-#
-# - 'race' (dict): Confidence scores for each race category.
-# - 'indian': Confidence score for Indian ethnicity.
-#     - 'asian': Confidence score for Asian ethnicity.
-#     - 'latino hispanic': Confidence score for Latino/Hispanic ethnicity.
-#     - 'black': Confidence score for Black ethnicity.
-#     - 'middle eastern': Confidence score for Middle Eastern ethnicity.
-# - 'white': Confidence score for White ethnicity.
 def display_analysis_result(result, img_path):
     """
     显示面部分析结果的图表
