@@ -8,7 +8,7 @@ import matplotlib.image as mpimg
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-api_key =  "sk-proj-znVmsyxZGWWhNq7Ma8UbT3BlbkFJsLh63gSPVGUBnsBvwK43"
+api_key = "sk-proj-9n8bP4r9IOy3Q5jG4dXMT3BlbkFJATEfXMoZQfLMtcIDXmMG"
 
 client = OpenAI(
     api_key=api_key
