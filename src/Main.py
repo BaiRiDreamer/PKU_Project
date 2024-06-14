@@ -93,8 +93,9 @@ def real_time_face_recognition():
     if not os.path.isdir(face_db):
         print(colorama.Fore.RED + "请选择正确的文件夹" + colorama.Style.RESET_ALL)
         return
-
+    #  使用DeepFace.stream(face_db)来实现实时面部识别，同时实现crtl+c退出面部识别功能
     DeepFace.stream(face_db)
+
 
 
 
