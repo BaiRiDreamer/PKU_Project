@@ -102,7 +102,7 @@ def generate_life_span_video():
     生成年幼到年老的面部变化视频
     """
     # lifespan repo没有发布到pypi中，这里需要换成你的local machine的项目的路径
-    script_directory = 'F:\\code_testing\\Lifespan_Age_Transformation_Synthesis'
+    script_directory = 'Lifespan_Age_Transformation_Synthesis'
     os.chdir(script_directory)
 
     script_name = 'test.py'

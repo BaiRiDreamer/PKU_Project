@@ -1,0 +1,9 @@
+Lifespan_Age_Transformation_Synthesis/checkpoints/
+Lifespan_Age_Transformation_Synthesis/deeplab_model/
+Lifespan_Age_Transformation_Synthesis/datasets/males
+Lifespan_Age_Transformation_Synthesis/datasets/females
+Lifespan_Age_Transformation_Synthesis/results/
+Lifespan_Age_Transformation_Synthesis/build/
+Lifespan_Age_Transformation_Synthesis/evaluation/
+*/__pycache__/*
+*.dat
