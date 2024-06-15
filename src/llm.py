@@ -79,7 +79,7 @@ def match_images_with_description(analysis_results, user_description, k=3):
             description = f"Age: {details['age']}, Gender: {details['dominant_gender']}, " \
                           f"Race: {details['dominant_race']}, Emotions: {details['dominant_emotion']}."
             prompt = f"Does the following description match the user description '{user_description}'? " \
-                     f"Description: {description}. Please provide a confidence score from 0 to 100."
+                     f"Description: {description}. PLEASE PROVIDE A CONFIDENCE SCORE FROM 0 TO 180."
             futures.append(executor.submit(fetch_confidence_score, filename, prompt))
         
         for future in as_completed(futures):

@@ -6,6 +6,7 @@ import colorama
 import logging
 import os
 from llm import *
+import subprocess
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 logging.getLogger('tensorflow').setLevel(logging.ERROR)
@@ -96,7 +97,39 @@ def real_time_face_recognition():
     #  使用DeepFace.stream(face_db)来实现实时面部识别，同时实现crtl+c退出面部识别功能
     DeepFace.stream(face_db)
 
+def generate_life_span_video():
+    """
+    生成年幼到年老的面部变化视频
+    """
+    # lifespan repo没有发布到pypi中，这里需要换成你的local machine的项目的路径
+    script_directory = 'F:\\code_testing\\Lifespan_Age_Transformation_Synthesis'
+    os.chdir(script_directory)
 
+    script_name = 'test.py'
+
+    img_path = easygui.fileopenbox(msg="请选择一张正面、清晰的人脸图片", title="选择图片")
+
+    print("请在窗口选择你的图片")
+    print("the chosen image_path is ",img_path)
+
+    # img_path = "C:\\Users\\pw705\\Desktop\\download.jpg"
+    with open('males_image_list.txt', 'w') as f:
+        f.write(img_path)
+    args = ['--name', 'males_model', '--which_epoch', 'latest', '--display_id', '0', '--traverse', '--interp_step', '0.05', '--image_path_file', 'males_image_list.txt', '--make_video', '--in_the_wild', '--verbose']
+    command = ['python', script_name] + args
+
+    print("正在生成视频中，请耐心等待...")
+    
+    # 使用 subprocess 模块执行命令
+    try:
+        result = subprocess.run(command, check=True, capture_output=True, text=True)
+        print("视频生成成功")
+        print("输出:")
+        print(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print("视频生成失败")
+        print("错误信息:")
+        print(e.stderr)
 
 
 if __name__ == '__main__':
@@ -128,8 +161,9 @@ if __name__ == '__main__':
     print("3. 面部属性分析功能")
     print("4. 实时面部识别功能")
     print("5. 通过大语言模型查找数据库的人脸")
-    print("6. 退出系统")
-    print("7. 帮助菜单")
+    print("6. 通过GANs生成lifespan视频")
+    print("7. 退出系统")
+    print("8. 帮助菜单")
     print()
 
     while True:
@@ -152,11 +186,13 @@ if __name__ == '__main__':
             analysis_results = load_analysis_results(db_path)
             res = match_images_with_description(analysis_results,description)
             display_images(db_path,res)
-            
         elif choice == "6":
+            generate_life_span_video()
+
+        elif choice == "7":
             print(colorama.Fore.RED + "感谢使用，再见！" + colorama.Style.RESET_ALL)
             break
-        elif choice == "7":
+        elif choice == "8":
             print(colorama.Fore.BLUE + "使用教程:\n" + colorama.Style.RESET_ALL)
             print("1. 面部验证功能")
             print("2. 在数据库中查找面部")
