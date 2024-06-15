@@ -153,3 +153,13 @@ def batch_process_images():
         messagebox.showinfo("完成", "批量处理完成")
     else:
         messagebox.showwarning("警告", "请选择文件夹进行批量处理")
+
+
+def analyze_images(directory):
+    results = {}
+    for filename in os.listdir(directory):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg')):  # Check for image files
+            path = os.path.join(directory, filename)
+            result = DeepFace.analyze(img_path=path, actions=['age', 'gender', 'race', 'emotion'])
+            results[filename] = result
+    return results

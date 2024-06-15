@@ -2,13 +2,13 @@ import argparse
 import os
 import json
 from openai import OpenAI
-from init import analyze_images
+from utils import analyze_images
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-api_key = "sk-proj-9n8bP4r9IOy3Q5jG4dXMT3BlbkFJATEfXMoZQfLMtcIDXmMG"
+api_key = "sk-proj-mU9oUuG3dUeXB4oRv5MVT3BlbkFJS8QRvSvLTt2eW9ZBGLbH"
 
 client = OpenAI(
     api_key=api_key
